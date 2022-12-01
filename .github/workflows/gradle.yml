@@ -22,7 +22,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         versions: [8,11,17]
-        runs-on: ${{matrix.os}}
+      runs-on: ${{matrix.os}}
       env:
         JDK_VERSION: ${{matrix.versions}}
 
