@@ -26,7 +26,11 @@ jobs:
     env:
       JDK_VERSION: ${{matrix.jversions}}
 
+
     steps:
-    - uses: actions/checkout@v3
-    - name: just build
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+    #- uses: actions/checkout@v3
+    - name: Build with Gradle
+      run: |
+        npm ci
+        npm run build
+      #uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
